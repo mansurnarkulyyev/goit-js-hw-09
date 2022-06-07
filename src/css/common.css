@@ -17,11 +17,17 @@ img {
   max-width: 100%;
 }
 
-/* 
+
+.container{
+  display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
 .timer {
   font-family: sans-serif;
   color: #fff;
-  display: inline-block;
+  margin-bottom: 30px;
   font-weight: 100;
   text-align: center;
   font-size: 30px;
@@ -50,8 +56,21 @@ img {
   border-radius: 3px;
 }
 
-.button{
-  padding: 15px;
-  border-radius: 3px;
-  background: #00bf96;
+
+.button {
+  background-color: #00bf96;
+  color: white;
+ 
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+}
+
+/* .button {
+  background-color: #ddd;
+  color: white;
 } */
