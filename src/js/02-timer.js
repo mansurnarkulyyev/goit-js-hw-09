@@ -121,6 +121,126 @@ function updateTime() {
 }
 
 
+
+// 2-й рабочий вариант
+
+// const refs = {
+//     timerElem: document.querySelector("#datetime-picker"), 
+//     timerBtn: document.querySelector(".button"), 
+//     field: document.querySelector(".field") 
+//   };
+  
+//   var selectedValidDate = [];
+  
+//   const options = {
+//     enableTime: true, 
+//     time_24hr: true, 
+//     defaultDate: new Date(),  
+//      dateFormat: "Y-m-d H:i:s",
+//     minuteIncrement: 1, 
+//     onClose: ([selectedDate]) => {
+//       const now = new Date();
+//       const isValid = now < selectedDate;
+//       if (!isValid) {
+//         alert("Please choose a date in the future");
+//         refs.timerBtn.disabled = true;
+//         return;
+//       }
+//       selectedValidDate[0] = selectedDate;
+//       refs.timerBtn.disabled = false;
+//     }
+//   };
+  
+//   // console.log(options);
+//   const datepicker = flatpickr(refs.timerElem, options);
+  
+//   // addLeadingZero(value)
+  
+//   class Timer {
+//     constructor({ onTik }) {
+//       this.intervalId = null;
+//       this.isActive = null;
+//       this.onTik = onTik;
+//       this.init();
+//     }
+  
+//     init() {
+//       const time = this.convertMs(0);
+//       this.onTik(time);
+//     }
+  
+//     start() {
+//       if (this.isActive) {
+//         return;
+//       }
+//       const [startTime] = selectedValidDate;
+  
+//       this.isActive = true;
+  
+//       this.intervalId = setInterval(() => {
+//         const currentTime = new Date();
+//         const deltaTime = startTime.getTime() - currentTime.getTime();
+//         const time = this.convertMs(deltaTime);
+//         this.stop(time);
+//         this.onTik(time);
+//       }, 1000);
+//     }
+  
+//     stop({ days, hours, minutes, seconds }) {
+//       if (days <= 0 && hours <= 0 && minutes <= 0 && seconds <= 0) {
+//         clearInterval(this.intervalId);
+//         this.isActive = false;
+//         const time = this.convertMs(0);
+//         this.onTik(time);
+//         alert("Please choose a date in the future");
+//       }
+//     }
+  
+//     convertMs(ms) {
+//       //getTimeComponent
+//       // Number of milliseconds per unit of time
+//       const second = 1000;
+//       const minute = second * 60;
+//       const hour = minute * 60;
+//       const day = hour * 24;
+  
+//       // Remaining days
+//       const days = this.pad(Math.floor(ms / day));
+//       // Remaining hours
+//       const hours = this.pad(Math.floor((ms % day) / hour));
+//       // Remaining minutes
+//       const minutes = this.pad(Math.floor(((ms % day) % hour) / minute));
+//       // Remaining seconds
+//       const seconds = this.pad(
+//         Math.floor((((ms % day) % hour) % minute) / second)
+//       );
+  
+//       return { days, hours, minutes, seconds };
+//     }
+  
+//     pad(value) {
+//       return String(value).padStart(2, "0");
+//     }
+//   }
+  
+//   function updateClockFace({ days, hours, minutes, seconds }) {
+//     refs.field.textContent = `${days}:${hours}:${minutes}:${seconds}`;
+//   }
+  
+//   const timer = new Timer({
+//     onTik: updateClockFace
+//   });
+  
+//   // refs.
+  
+//   refs.timerBtn.addEventListener("click", () => {
+//     // if (refs.timerBtn >= 0) {
+//     timer.start();
+//     // }
+//   });
+  
+
+
 // ******
 
 // function addLeadingZero(value) {
