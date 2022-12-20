@@ -11,7 +11,6 @@ let timerId = null;
 
 stopBtn.disabled = true;
 
-
 startBtn.addEventListener("click", () => {
     startBtn.disabled = true
     stopBtn.disabled = false
@@ -31,38 +30,5 @@ stopBtn.addEventListener("click", () => {
     stopBtn.disabled = true
     // console.log(`Interval with id ${timerId} has stopped!`);
 });
-
-
-
-
-
-
-//     setRandomColor = () => {
-//         const _color = getRandomHexColor();
-//         console.log(_color)
-//         document.body.style.backgroundColor = _color
-//     }
-
-// let interval = undefined
-
-// startBtn.addEventListener('click', e => interval = interval ?
-//     interval :
-//     setInterval(() => setRandomColor(), 1000))
-
-// stopBtn.addEventListener('click', e => clearInterval(interval));
-
-
-
-// const intervalId = setInterval(() => {
-//     startBtn.addEventListener('click', () => {
-//         document.body.style.backgroundColor = getRandomHexColor();
-//         //   colorValue.textContent = getRandomHexColor();
-//     })
-//     // console.log('hello');
-// }, 1000)
-
-// stopBtn.addEventListener('click', () => {
-//     clearTimeout();
-//     // clearInterval(intervalId);
 
 
